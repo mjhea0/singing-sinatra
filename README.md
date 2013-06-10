@@ -51,4 +51,4 @@ $ git push heroku master
 $ heroku rake db:migrate
 ```
 
-Smoke on that.
+Put that in your pipe.
