@@ -16,17 +16,39 @@ Hi! I love Sinatra. I also love clear, concise, readable, testable code, as well
 | rerun             | auto-reloads sinatra after each change |
 | haml              | lightweight markup language |
 | rspec             | unit testing | 
-| sinatra-flash     | 'flash' messages |
+| sinatra-flash     | 'flash'ing messages |
 
+###1) Download and run:
 
-rerun ruby app.rb
+```
+$ git clone git@github.com:mjhea0/singing-sinatra.git
+$ cd singing-sinatra
+$ bundle install              
+$ rerun ruby app.rb
+```
+Then fire up [http://localhost:4567/](http://localhost:4567/)
 
-Download and run:
+###2) Code / Test / Refactor
 
-git clone git@github.com:mjhea0/singing-sinatra
+###3) Version control 
 
-cd sinatra-bootstrap
-bundle install              # To install sinatra
+```
+$ git init
+$ git add *
+$ git commit -m "initial commit"
+```
 
-ruby app.rb                 # To run the sample
-Then open http://localhost:4567/
+###4) Deploy
+
+- Create an account on Heroku. (if needed)
+- Install the gem - `sudo gem install heroku` (if needed)
+- Generate an SSH key. (if needed)
+- Push to Heroku:
+
+```
+$ heroku create <my-app-name>
+$ git push heroku master
+$ heroku rake db:migrate
+```
+
+Smoke on that.
